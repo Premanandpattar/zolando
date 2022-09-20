@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="2" name="Suite">
+<listeners>
+<listener class-name="org.zolando.genericUtilities.ImplimatationOfIAnnotationTransformer"/>
+</listeners>
+  <test thread-count="2" parallel="classes" name="Test1">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="EndToEnd_New.TestTestNGXml02"/>
+      <class name="EndToEnd_New.TestTestNGXml01"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="2" parallel="classes" name="Test2">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="EndToEnd_New.TestTestNGXml02"/>
+      <class name="EndToEnd_New.TestTestNGXml01"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

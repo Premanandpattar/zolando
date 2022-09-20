@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite1">
+	<listeners>
+		<listener class-name="org.zolando.genericUtilities.MyProjectListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Test1">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest"></class>
+			<class name="org.zolando.PlaceOrderAndCheckStatusTest"></class>
+			<class name="org.zolando.DeleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest"></class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Test2">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="org.zolando.UserNewAccountCreationTest"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

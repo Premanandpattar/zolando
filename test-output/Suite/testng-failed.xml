@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.zolando.genericUtilities.MyProjectListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="org.zolando.UserNewAccountCreationTest">
+        <methods>
+          <include name="beforeClassSetup"/>
+          <include name="afterClassSetup"/>
+          <include name="userNewAccountCreationTest"/>
+        </methods>
+      </class> <!-- org.zolando.UserNewAccountCreationTest -->
+      <class name="org.zolando.DeleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest">
+        <methods>
+          <include name="beforeClassSetup"/>
+          <include name="afterClassSetup"/>
+          <include name="deleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest"/>
+        </methods>
+      </class> <!-- org.zolando.DeleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest -->
+      <class name="org.zolando.PlaceOrderAndCheckStatusTest">
+        <methods>
+          <include name="beforeClassSetup"/>
+          <include name="afterClassSetup"/>
+          <include name="placeOrderAndCheckStatusTest"/>
+        </methods>
+      </class> <!-- org.zolando.PlaceOrderAndCheckStatusTest -->
+      <class name="org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest">
+        <methods>
+          <include name="createCategoryAndCreateSubCategoryAndInsertProductTest"/>
+          <include name="beforeClassSetup"/>
+          <include name="afterClassSetup"/>
+        </methods>
+      </class> <!-- org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
