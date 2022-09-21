@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 import org.zolando.genericUtilities.BaseClass;
+import org.zolando.genericUtilities.MyProjectListener;
 import org.zolando.genericUtilities.PropertyKeysNames;
 import org.zolando.userObjectRepositore.UserTextFieldNames;
 
@@ -16,11 +17,11 @@ public class UserNewAccountCreationTest extends BaseClass {
 	public void userNewAccountCreationTest() {
 		driverUtility.launchUrl(urlForUser);
 		driverUtility.verifyWebPage("Shopping Portal");
-//		MyProjectListener.log.info("URL is launched");
+		MyProjectListener.log.info("URL is launched");
 
 		userCommanPage.clickOnLogInLink();
 		driverUtility.verifyWebPage("create a new account");
-//		MyProjectListener.log.info("create a new account Page is opened");
+		MyProjectListener.log.info("create a new account Page is opened");
 
 		listOfData = excelUtility.getDataFromExcelStoredInList(
 				fileUtility.getDataFromPropertyFile(PropertyKeysNames.sheetName.toString()));
@@ -33,15 +34,15 @@ public class UserNewAccountCreationTest extends BaseClass {
 		String alertText = driverUtility.getTextFromAlert();
 		driverUtility.alertAccept();
 		driverUtility.verifyResult(alertText, "You are successfully register");
-//		MyProjectListener.log.info("Account is created");
+		MyProjectListener.log.info("Account is created");
 
 		userLogInAndCreateNewAccountPage.loginInToUserAccount(emailAddress, Password);
 		driverUtility.verifyWebPage(fullName);
-//		MyProjectListener.log.info("Logged in through new user account");
+		MyProjectListener.log.info("Logged in through new user account");
 
 		userCommanPage.clickonUserLogOut();
 		driverUtility.verifyWebPage("Login");
-//		MyProjectListener.log.info("User logged out");
+		MyProjectListener.log.info("User logged out");
 
 	}
 
