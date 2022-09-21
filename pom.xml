@@ -11,7 +11,7 @@
 
 	<profiles>
 		<profile>
-			<id>batch</id>
+			<id>parallel</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -20,7 +20,7 @@
 						<version>3.0.0-M7</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>testngBatch.xml</suiteXmlFile>
+								<suiteXmlFile>testngParllel.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>

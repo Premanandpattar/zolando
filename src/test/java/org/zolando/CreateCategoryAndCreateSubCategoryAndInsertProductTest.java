@@ -23,9 +23,6 @@ public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends Base
 
 	@Test
 	public void createCategoryAndCreateSubCategoryAndInsertProductTest() {
-		
-		
-		// MyProjectListener.loginTest
 		driverUtility.launchUrl(urlForAdmin);
 		driverUtility.verifyWebPage("Sign In");
 		MyProjectListener.log.info("URL launched");
