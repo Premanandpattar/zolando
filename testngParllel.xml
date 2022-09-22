@@ -6,8 +6,8 @@
 	</listeners>
 	<test thread-count="5" parallel="classes" name="Test">
 		<classes>
-			<class name="org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest"></class>
-			<class name="org.zolando.UserNewAccountCreationTest"></class>
+			<class name="org.zolando.Test1"></class>
+			<class name="org.zolando.Test2"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

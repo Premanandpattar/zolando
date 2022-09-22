@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.zolando.genericUtilities.BaseClass;
 import org.zolando.genericUtilities.MyProjectListener;
 import org.zolando.genericUtilities.PropertyKeysNames;
+import org.zolando.genericUtilities.ThreadSafeClass;
 import org.zolando.userObjectRepositore.UserTextFieldNames;
 
 public class UserNewAccountCreationTest extends BaseClass {
@@ -17,11 +18,11 @@ public class UserNewAccountCreationTest extends BaseClass {
 	public void userNewAccountCreationTest() {
 		driverUtility.launchUrl(urlForUser);
 		driverUtility.verifyWebPage("Shopping Portal");
-		MyProjectListener.log.info("URL is launched");
+		ThreadSafeClass.getTest().info("URL is launched");
 
 		userCommanPage.clickOnLogInLink();
 		driverUtility.verifyWebPage("create a new account");
-		MyProjectListener.log.info("create a new account Page is opened");
+		ThreadSafeClass.getTest().info("create a new account Page is opened");
 
 		listOfData = excelUtility.getDataFromExcelStoredInList(
 				fileUtility.getDataFromPropertyFile(PropertyKeysNames.sheetName.toString()));
@@ -34,15 +35,15 @@ public class UserNewAccountCreationTest extends BaseClass {
 		String alertText = driverUtility.getTextFromAlert();
 		driverUtility.alertAccept();
 		driverUtility.verifyResult(alertText, "You are successfully register");
-		MyProjectListener.log.info("Account is created");
+		ThreadSafeClass.getTest().info("Account is created");
 
 		userLogInAndCreateNewAccountPage.loginInToUserAccount(emailAddress, Password);
 		driverUtility.verifyWebPage(fullName);
-		MyProjectListener.log.info("Logged in through new user account");
+		ThreadSafeClass.getTest().info("Logged in through new user account");
 
 		userCommanPage.clickonUserLogOut();
 		driverUtility.verifyWebPage("Login");
-		MyProjectListener.log.info("User logged out");
+		ThreadSafeClass.getTest().info("User logged out");
 
 	}
 

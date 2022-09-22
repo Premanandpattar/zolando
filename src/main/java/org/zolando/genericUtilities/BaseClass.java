@@ -23,8 +23,6 @@ public class BaseClass {
 	protected UserCommanPage userCommanPage;
 	protected UserLogInAndCreateNewAccountPage userLogInAndCreateNewAccountPage;
 	protected String urlForUser;
-	public static WebDriver sDriver;
-	public static JavaUtility SJavaUtility;
 
 	/**
 	 * Initialize the all utility class open the excel, propertyFile read the common
@@ -41,7 +39,7 @@ public class BaseClass {
 		fileUtility = new PropertyFileUtility(IConstanceUtility.PROPERTIYFILEPATH);
 		driverUtility = new WebDriverUtility();
 		javaUtility = new JavaUtility();
-		SJavaUtility = javaUtility;
+		ThreadSafeClass.setJavaUtility(javaUtility);
 
 		// Initialize the property file and excel file
 		excelUtility.openExcelWorkBook(IConstanceUtility.EXCELPATH);
@@ -57,7 +55,7 @@ public class BaseClass {
 
 		// launching the browser and application. doing some setting
 		driver = driverUtility.openBrowserDoSetting(browser, timeOuts);
-		sDriver = driver;
+ThreadSafeClass.setDriver(driver);
 		driverUtility.initialzeJavaScriptExecutor();
 
 		// create object for common POM repository

@@ -4,13 +4,17 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.zolando.genericUtilities.BaseClass;
 import org.zolando.genericUtilities.MyProjectListener;
+import org.zolando.genericUtilities.ThreadSafeClass;
 
 public class Test2 extends BaseClass{
 
 	@Test
 	public void test2() {
-		MyProjectListener.log.info("log 2");
-		Reporter.log("hello",true);
+		ThreadSafeClass.getTest().info("log 1");
+		ThreadSafeClass.getTest().info("log 2");
+		ThreadSafeClass.getTest().info("log 3");
+		ThreadSafeClass.getTest().info("log 4");
+		ThreadSafeClass.getTest().info("log 5");
 //		MyProjectListener listener=new MyProjectListener();
 //		listener.log1.info("log 2");
 	}

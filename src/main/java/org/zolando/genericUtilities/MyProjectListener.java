@@ -12,8 +12,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class MyProjectListener implements ITestListener {
 
 	private ExtentReports report;
-	public static ExtentTest log;
-	public ExtentTest log1;
+	public ExtentTest log;
 
 	@Override
 	public void onStart(ITestContext context) {
@@ -32,28 +31,28 @@ public class MyProjectListener implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		log=report.createTest(result.getMethod().getMethodName());
-		log1=log;
+		ThreadSafeClass.setTest(log);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		log.pass(result.getMethod().getMethodName()+" is Passed");
+		ThreadSafeClass.getTest().pass(result.getMethod().getMethodName()+" is Passed");
 
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		log.fail(result.getMethod().getMethodName()+" is Failed");
-		log.fail(result.getThrowable());
+		ThreadSafeClass.getTest().fail(result.getMethod().getMethodName()+" is Failed");
+		ThreadSafeClass.getTest().fail(result.getThrowable());
 		WebDriverUtility driverUtility = new WebDriverUtility();
-		String path = driverUtility.getScreenShot(BaseClass.sDriver);
-		log.addScreenCaptureFromBase64String(path,result.getMethod().getMethodName());
+		String path = driverUtility.getScreenShot(ThreadSafeClass.getDriver());
+		ThreadSafeClass.getTest().addScreenCaptureFromBase64String(path,result.getMethod().getMethodName());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		log.skip(result.getMethod().getMethodName()+" is Skiped");
-		log.skip(result.getThrowable());
+		ThreadSafeClass.getTest().skip(result.getMethod().getMethodName()+" is Skiped");
+		ThreadSafeClass.getTest().skip(result.getThrowable());
 	}
 
 	@Override

@@ -12,8 +12,8 @@ import org.zolando.adminObjectRepositore.CreateSubCategoryPage;
 import org.zolando.adminObjectRepositore.EntriesDropDownOptions;
 import org.zolando.adminObjectRepositore.InsertProductPage;
 import org.zolando.genericUtilities.BaseClass;
-import org.zolando.genericUtilities.MyProjectListener;
 import org.zolando.genericUtilities.PropertyKeysNames;
+import org.zolando.genericUtilities.ThreadSafeClass;
 
 public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends BaseClass {
 
@@ -25,18 +25,18 @@ public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends Base
 	public void createCategoryAndCreateSubCategoryAndInsertProductTest() {
 		driverUtility.launchUrl(urlForAdmin);
 		driverUtility.verifyWebPage("Sign In");
-		MyProjectListener.log.info("URL launched");
+		ThreadSafeClass.getTest().info("URL launched");
 
 		adminLoginPage.loginInToUserAccount(adminUserNamer, adminPassword);
 		driverUtility.verifyWebPage("Logout");
-		MyProjectListener.log.info("admin logged in");
+		ThreadSafeClass.getTest().info("admin logged in");
 
 		// createCatagoryTest
 		listOfData = excelUtility.getDataFromExcelStoredInList(
 				fileUtility.getDataFromPropertyFile(PropertyKeysNames.sheetName.toString()));
 		adminCommonPage.clickOnRequiredTab(AdminTabNames.CREATE_CATEGORY);
 		driverUtility.verifyWebPage("Manage Categories");
-		MyProjectListener.log.info("Create category Page is opened");
+		ThreadSafeClass.getTest().info("Create category Page is opened");
 
 		CreateCategoryPage createCategory = new CreateCategoryPage(driver, driverUtility);
 		categoryName = listOfData.get(0).get(AdminTextFieldNamesAndImageUploadNames.CATEGORY_NAME)
@@ -47,12 +47,12 @@ public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends Base
 		driverUtility.selectOptionInDropDwon(createCategory.entriesDropDown(), EntriesDropDownOptions.SELECT_100);
 		ArrayList<String> lastRowText = createCategory.getLastRowData();
 		driverUtility.verifyResult(lastRowText.contains(categoryName));
-		MyProjectListener.log.info("Category is created");
+		ThreadSafeClass.getTest().info("Category is created");
 
 		// createSubCategoryTest
 		adminCommonPage.clickOnRequiredTab(AdminTabNames.SUB_CATEGORY);
 		driverUtility.verifyWebPage("SubCategory Name");
-		MyProjectListener.log.info("Create sub category Page is opened");
+		ThreadSafeClass.getTest().info("Create sub category Page is opened");
 
 		CreateSubCategoryPage subCategoryPage = new CreateSubCategoryPage(driver, driverUtility);
 		subCategoryName = listOfData.get(0).get(AdminTextFieldNamesAndImageUploadNames.SUBCATEGORY_NAME);
@@ -60,12 +60,12 @@ public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends Base
 		driverUtility.selectOptionInDropDwon(subCategoryPage.entriesDropDown(), EntriesDropDownOptions.SELECT_100);
 		ArrayList<String> lastRowText1 = subCategoryPage.getLastRowData();
 		driverUtility.verifyResult(lastRowText1.contains(subCategoryName) && lastRowText1.contains(categoryName));
-		MyProjectListener.log.info("Sub category is created");
+		ThreadSafeClass.getTest().info("Sub category is created");
 
 		// insertProductTest
 		adminCommonPage.clickOnRequiredTab(AdminTabNames.INSERT_PRODUCT);
 		driverUtility.verifyWebPage("Product Name");
-		MyProjectListener.log.info("Insert product Page is opened");
+		ThreadSafeClass.getTest().info("Insert product Page is opened");
 
 		InsertProductPage insertProductPage = new InsertProductPage(driver, driverUtility);
 		String productName = listOfData.get(0).get(AdminTextFieldNamesAndImageUploadNames.PRODUCT_NAME);
@@ -88,10 +88,10 @@ public class CreateCategoryAndCreateSubCategoryAndInsertProductTest extends Base
 		ArrayList<String> lastRowText11 = insertProductPage.getLastRowData();
 		driverUtility.verifyResult(lastRowText11.contains(subCategoryName) && lastRowText11.contains(categoryName)
 				&& lastRowText11.contains(productName) && lastRowText11.contains(productCompany));
-		MyProjectListener.log.info("Product is inserted");
-		
+		ThreadSafeClass.getTest().info("Product is inserted");
+
 		adminCommonPage.clickOnLogOutButton();
 		driverUtility.verifyWebPage("Sign In");
-		MyProjectListener.log.info("Admin logged out");
+		ThreadSafeClass.getTest().info("Admin logged out");
 	}
 }
