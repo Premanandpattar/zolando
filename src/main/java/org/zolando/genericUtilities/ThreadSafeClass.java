@@ -6,6 +6,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class ThreadSafeClass {
 
+	
 	private static ThreadLocal<ExtentTest> test=new ThreadLocal<>();
 	private static ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 	private static ThreadLocal<JavaUtility> javaUtility=new ThreadLocal<>();
@@ -33,10 +34,5 @@ public class ThreadSafeClass {
 
 	public static void setJavaUtility(JavaUtility sJavaUtility) {
 		javaUtility.set(sJavaUtility);
-	}
-	
-	
-	
-	
-	
+	}	
 }
