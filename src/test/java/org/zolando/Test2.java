@@ -13,6 +13,7 @@ public class Test2 extends BaseClass {
 		ThreadSafeClass.getTest().info("log 3");
 		ThreadSafeClass.getTest().info("log 4");
 		ThreadSafeClass.getTest().info("log 5");
+		System.out.println("im test 1");
 //		MyProjectListener listener=new MyProjectListener();
 //		listener.log1.info("log 2");
 	}

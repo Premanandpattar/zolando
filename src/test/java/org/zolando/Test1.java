@@ -17,6 +17,7 @@ public class Test1 extends BaseClass {
 		ThreadSafeClass.getTest().info("log 7");
 		
 		ThreadSafeClass.getTest().info("log 8");
+		System.out.println("im test 1");
 //		MyProjectListener listener=new MyProjectListener();
 //		listener.log1.info("log 2");
 	}
