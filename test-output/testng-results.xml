@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="38982" started-at="2022-09-21T16:38:06 GMT+05:30" finished-at="2022-09-21T16:38:45 GMT+05:30">
+  <suite name="Default suite" duration-ms="33890" started-at="2022-09-23T14:59:34 GMT+05:30" finished-at="2022-09-23T15:00:08 GMT+05:30">
     <groups>
     </groups>
-    <test name="Test" duration-ms="38982" started-at="2022-09-21T16:38:06 GMT+05:30" finished-at="2022-09-21T16:38:45 GMT+05:30">
-      <class name="org.zolando.Test1">
-        <test-method status="PASS" signature="beforeClassSetup()[pri:0, instance:org.zolando.Test1@481a15ff]" name="beforeClassSetup" is-config="true" duration-ms="34083" started-at="2022-09-21T16:38:08 GMT+05:30" finished-at="2022-09-21T16:38:42 GMT+05:30">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClassSetup -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:org.zolando.Test1@481a15ff]" name="test1" duration-ms="46" started-at="2022-09-21T16:38:42 GMT+05:30" finished-at="2022-09-21T16:38:42 GMT+05:30">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="afterClassSetup()[pri:0, instance:org.zolando.Test1@481a15ff]" name="afterClassSetup" is-config="true" duration-ms="2939" started-at="2022-09-21T16:38:42 GMT+05:30" finished-at="2022-09-21T16:38:45 GMT+05:30">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClassSetup -->
-      </class> <!-- org.zolando.Test1 -->
+    <test name="Default test" duration-ms="33890" started-at="2022-09-23T14:59:34 GMT+05:30" finished-at="2022-09-23T15:00:08 GMT+05:30">
       <class name="org.zolando.Test2">
-        <test-method status="PASS" signature="beforeClassSetup()[pri:0, instance:org.zolando.Test2@4c762604]" name="beforeClassSetup" is-config="true" duration-ms="33762" started-at="2022-09-21T16:38:08 GMT+05:30" finished-at="2022-09-21T16:38:42 GMT+05:30">
+        <test-method status="PASS" signature="beforeClassSetup()[pri:0, instance:org.zolando.Test2@306279ee]" name="beforeClassSetup" is-config="true" duration-ms="30674" started-at="2022-09-23T14:59:34 GMT+05:30" finished-at="2022-09-23T15:00:04 GMT+05:30">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassSetup -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:org.zolando.Test2@4c762604]" name="test2" duration-ms="173" started-at="2022-09-21T16:38:42 GMT+05:30" finished-at="2022-09-21T16:38:42 GMT+05:30">
+        <test-method status="PASS" signature="test2()[pri:0, instance:org.zolando.Test2@306279ee]" name="test2" duration-ms="33" started-at="2022-09-23T15:00:04 GMT+05:30" finished-at="2022-09-23T15:00:05 GMT+05:30">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="afterClassSetup()[pri:0, instance:org.zolando.Test2@4c762604]" name="afterClassSetup" is-config="true" duration-ms="2965" started-at="2022-09-21T16:38:42 GMT+05:30" finished-at="2022-09-21T16:38:45 GMT+05:30">
+        <test-method status="PASS" signature="afterClassSetup()[pri:0, instance:org.zolando.Test2@306279ee]" name="afterClassSetup" is-config="true" duration-ms="2943" started-at="2022-09-23T15:00:05 GMT+05:30" finished-at="2022-09-23T15:00:08 GMT+05:30">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassSetup -->
       </class> <!-- org.zolando.Test2 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

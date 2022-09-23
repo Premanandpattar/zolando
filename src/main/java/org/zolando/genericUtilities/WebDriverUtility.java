@@ -48,7 +48,8 @@ public final class WebDriverUtility {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "./softwares/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else {
 			System.out.println("Please enter valid browser name");
