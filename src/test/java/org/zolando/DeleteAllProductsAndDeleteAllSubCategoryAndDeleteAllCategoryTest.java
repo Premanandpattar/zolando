@@ -6,7 +6,6 @@ import org.zolando.adminObjectRepositore.CreateCategoryPage;
 import org.zolando.adminObjectRepositore.CreateSubCategoryPage;
 import org.zolando.adminObjectRepositore.ManageProductsPage;
 import org.zolando.genericUtilities.BaseClass;
-import org.zolando.genericUtilities.MyProjectListener;
 import org.zolando.genericUtilities.ThreadSafeClass;
 
 public class DeleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest extends BaseClass {

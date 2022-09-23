@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 import org.zolando.genericUtilities.BaseClass;
-import org.zolando.genericUtilities.MyProjectListener;
 import org.zolando.genericUtilities.PropertyKeysNames;
 import org.zolando.genericUtilities.ThreadSafeClass;
 import org.zolando.userObjectRepositore.UserTextFieldNames;

@@ -1,4 +1,4 @@
- package org.zolando.genericUtilities;
+package org.zolando.genericUtilities;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

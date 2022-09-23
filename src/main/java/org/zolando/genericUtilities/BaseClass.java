@@ -3,7 +3,6 @@ package org.zolando.genericUtilities;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.zolando.adminObjectRepositore.AdminCommonPage;
 import org.zolando.adminObjectRepositore.AdminLoginPage;
 import org.zolando.userObjectRepositore.UserCommanPage;
