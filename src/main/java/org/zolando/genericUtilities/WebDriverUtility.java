@@ -259,6 +259,7 @@ public final class WebDriverUtility {
 		return text;
 	}
 
+	//
 	public void getScreenShot(WebDriver driver, JavaUtility javaUtility, String methodName) {
 		TakesScreenshot tss = (TakesScreenshot) driver;
 		File src = tss.getScreenshotAs(OutputType.FILE);
