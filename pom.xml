@@ -17,7 +17,7 @@
 				<version>2.12.4</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>testngParllel.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

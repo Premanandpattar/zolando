@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite data-provider-thread-count="3" name="Suite">
-  <test name="Test">
+<suite name="Suite">
+<listeners> 
+<listener class-name="org.zolando.genericUtilities.MyProjectListener"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="org.zolando.practies.CmdDataDrivenTestingTest"/>
+      <class name="org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest"/>
+      <class name="org.zolando.PlaceOrderAndCheckStatusTest"/>
+      <class name="org.zolando.UserNewAccountCreationTest"/>
+      <class name="org.zolando.DeleteAllProductsAndDeleteAllSubCategoryAndDeleteAllCategoryTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
