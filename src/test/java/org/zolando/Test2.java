@@ -1,9 +1,10 @@
 package org.zolando;
 
 import org.testng.annotations.Test;
+import org.zolando.genericUtilities.BaseClass;
 import org.zolando.genericUtilities.ThreadSafeClass;
 
-public class Test2 {
+public class Test2 extends BaseClass {
 
 	@Test
 	public void test2() {
