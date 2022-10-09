@@ -54,7 +54,7 @@ public class BaseClass {
 
 		// launching the browser and application. doing some setting
 		driver = driverUtility.openBrowserDoSetting(browser, timeOuts);
-ThreadSafeClass.setDriver(driver);
+		ThreadSafeClass.setDriver(driver);
 		driverUtility.initialzeJavaScriptExecutor();
 
 		// create object for common POM repository

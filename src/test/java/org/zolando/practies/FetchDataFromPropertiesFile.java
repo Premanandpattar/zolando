@@ -22,7 +22,6 @@ public class FetchDataFromPropertiesFile {
 		try {
 			property.load(fis);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		// step 4---> fetch the data
@@ -30,14 +29,7 @@ public class FetchDataFromPropertiesFile {
 		
 		return value;
 		
-		//System.out.println(urlForUser);
-		
-		
-		
-		
-		
-		
-		
+		//System.out.println(urlForUser);	
 	}
 	
 }

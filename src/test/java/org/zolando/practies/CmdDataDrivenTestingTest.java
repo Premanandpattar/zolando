@@ -11,6 +11,7 @@ public class CmdDataDrivenTestingTest {
 //		browser="chrome";
 		String url = System.getProperty("u");
 //		url="https://www.flipkart.com";
+		System.out.println();
 		new WebDriverUtility().openApplication(browser,(long) 10,url);
 	}
 }

@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.zolando.Test2">
+      <class name="org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest">
         <methods>
-          <include name="test2"/>
+          <include name="createCategoryAndCreateSubCategoryAndInsertProductTest"/>
+          <include name="beforeClassSetup"/>
+          <include name="afterClassSetup"/>
         </methods>
-      </class> <!-- org.zolando.Test2 -->
+      </class> <!-- org.zolando.CreateCategoryAndCreateSubCategoryAndInsertProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

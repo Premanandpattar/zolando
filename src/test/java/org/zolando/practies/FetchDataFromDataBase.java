@@ -25,8 +25,9 @@ public class FetchDataFromDataBase {
 			Statement statement = connection.createStatement();
 
 			// step 5---> execute the query
-			ResultSet result = statement.executeQuery("select * from sdet40");
+			ResultSet result = statement.executeQuery("select phone_number from sdet40 where emp_name='prem'");
 
+			System.out.println(result);
 			// step 6---> verify or iterate or fetch the data
 			while (result.next()) {
 				System.out.println(result.getString("phone_number"));

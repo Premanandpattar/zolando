@@ -1,29 +1,30 @@
 package org.zolando.practies;
 
+import java.time.Duration;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Calender {
 
 	public static void main(String[] args) {
-		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		String reqDate = "15";// DD
-		String reqMonth = "January";// MM-->01to12, MMM-->jan feb etc.., MMMM-->January etc..
+		String reqMonth = "Jun";// MM-->01to12, MMM-->jan feb etc.., MMMM-->January etc..
 		String reqYear = "2020";
 
-		int reqMonthInNum = DateTimeFormatter.ofPattern("MMMM").withLocale(Locale.ENGLISH).parse(reqMonth)
+		int reqMonthInNum = DateTimeFormatter.ofPattern("MMM").withLocale(Locale.ENGLISH).parse(reqMonth)
 				.get(ChronoField.MONTH_OF_YEAR);
+		System.out.println(reqMonthInNum);
 		int reqYearInNum = Integer.parseInt(reqYear);
 		driver.get("http://testleaf.herokuapp.com/pages/Calendar.html");
 		driver.findElement(By.id("datepicker")).click();
