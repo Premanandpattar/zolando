@@ -35,6 +35,20 @@ public final class DataBaseUtility {
 			e.printStackTrace();
 		}
 	}
+	
+	public DataBaseUtility(String dbURL, String userName, String UserPassword) {
+		try {
+			Driver dbDriver = new Driver();
+			DriverManager.registerDriver(dbDriver);
+			connection = DriverManager.getConnection(dbURL, userName, UserPassword);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public DataBaseUtility() {
+		
+	}
 
 	/**
 	 * This method is used to get the data from the table

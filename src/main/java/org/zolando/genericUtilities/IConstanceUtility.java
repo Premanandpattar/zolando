@@ -9,6 +9,7 @@ package org.zolando.genericUtilities;
 public interface IConstanceUtility {
 	String EXCELPATH = "./src/test/resources/TestData.xlsx";
 	String PROPERTIYFILEPATH = "./src/test/resources/comman.properties";
-	String DATABASEPATH="jdbc:mysql://localhost:3306/tyss";
-	
+	String DATABASEPATH="jdbc:mysql://localhost:3306/projetcs";
+	String DATABASEUSERNAME="root";
+	String DATABASEPASSWORD="root";
 }

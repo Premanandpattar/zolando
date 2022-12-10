@@ -1,6 +1,6 @@
 package org.zolando.genericUtilities;
 
-public class BaseClassRestAssured {
+public class BaseAPIClass {
 
 	
 }
