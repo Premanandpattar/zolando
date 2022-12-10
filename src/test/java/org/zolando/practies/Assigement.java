@@ -31,7 +31,7 @@ public class Assigement {
 		
 		JavascriptExecutor jss = (JavascriptExecutor) driver;
 		
-		jss.executeScript("arguments[0].scrollInToView", ele);
+		jss.executeScript("arguments[0].scrollInToView(true)", ele);
 		
 //		driver.findElement(By.xpath("//span[.='From']")).click();
 //		driver.findElement(By.xpath("//div[.='BOM']")).click();

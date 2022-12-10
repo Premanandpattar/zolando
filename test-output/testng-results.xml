@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-30T13:13:08 IST" name="Default suite" finished-at="2022-11-30T13:13:27 IST" duration-ms="18995">
+  <suite started-at="2022-12-10T06:04:04 IST" name="Default suite" finished-at="2022-12-10T06:04:55 IST" duration-ms="50584">
     <groups>
     </groups>
-    <test started-at="2022-11-30T13:13:08 IST" name="Default test" finished-at="2022-11-30T13:13:27 IST" duration-ms="18995">
-      <class name="org.zolando.practies.DataBaseSenario">
-        <test-method signature="validateData()[pri:0, instance:org.zolando.practies.DataBaseSenario@273e7444]" started-at="2022-11-30T13:13:08 IST" name="validateData" finished-at="2022-11-30T13:13:27 IST" duration-ms="18743" status="PASS">
+    <test started-at="2022-12-10T06:04:04 IST" name="Default test" finished-at="2022-12-10T06:04:55 IST" duration-ms="50584">
+      <class name="org.zolando.practies.Assigement">
+        <test-method signature="main()[pri:0, instance:org.zolando.practies.Assigement@242b836]" started-at="2022-12-10T06:04:05 IST" name="main" finished-at="2022-12-10T06:04:55 IST" duration-ms="50276" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateData -->
-      </class> <!-- org.zolando.practies.DataBaseSenario -->
+        </test-method> <!-- main -->
+      </class> <!-- org.zolando.practies.Assigement -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

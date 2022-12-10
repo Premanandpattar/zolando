@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.zolando.practies.DataBaseSenario">
+      <class name="org.zolando.practies.Assigement">
         <methods>
-          <include name="validateData"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- org.zolando.practies.DataBaseSenario -->
+      </class> <!-- org.zolando.practies.Assigement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
